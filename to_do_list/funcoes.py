@@ -22,6 +22,34 @@ def adicionarTarefas():
             print('======================================================================================')
             break
 
+#Função de listar tarefas:
+def listarTarefas():
+    while True:
+        try:
+            with open(CAMINHO_ARQUIVO, 'r', encoding='utf-8') as arquivo:
+                tarefas = arquivo.readlines()
+                if tarefas:
+                    print('\nTarefas Cadastradas:\n')
+                    tarefas_decodificadas = [json.loads(linha.strip()) for linha in tarefas]
+                    for i, tarefa in enumerate(tarefas_decodificadas, start=1):
+                        print(f'{i} - {tarefa}')
+                else:
+                    print('\nNenhuma tarefa foi cadastrada ainda.')
+                    break
+
+        except FileNotFoundError:
+            print('Nenhum arquivo de tarefas encontrado.')
+            return
+        
+        except Exception as erro:
+            print(f'ERRO ao listar tarefas: {erro}')
+
+        resposta = validarSaida()
+        if resposta == 'N':
+            print('\nListar tarefas foi encerrado. Obrigado!')
+            print('======================================================================================')
+            break
+        
 #Função de validar a saída:
 def validarSaida():
     while True:
