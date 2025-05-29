@@ -43,6 +43,7 @@ Um programa de console simples, desenvolvido em Python, para gerenciar uma lista
 
 ## 📁 Estrutura do Projeto
 
+```text
 projeto-lista-de-afazeres/
 │
 ├── main.py         # Arquivo principal, contém o menu e a lógica de navegação.
