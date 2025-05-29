@@ -106,18 +106,7 @@ def atualizarTarefas():
             print('\nAtualizar tarefas foi encerrado. Obrigado!')
             print('======================================================================================')
             break
-
-#Função de validar a saída:
-def validarSaida():
-    while True:
-        resposta = input ('Deseja continuar? [S/N]: ').strip().upper()
-
-        if resposta in 'SN':
-            return resposta
         
-        else:
-            print('OPS! Opção inválida! Por favor, digite [S] para continuar ou [N] para sair.')
-
 #Função de deletar tarefas:
 def deletarTarefas():
     while True:
@@ -175,6 +164,18 @@ def deletarTarefas():
             print('\nDeletar tarefas foi encerrado. Obrigado!')
             print('======================================================================================')
             break
+
+#Função de validar a saída:
+def validarSaida():
+    while True:
+        resposta = input ('Deseja continuar? [S/N]: ').strip().upper()
+
+        if resposta in 'SN':
+            return resposta
+        
+        else:
+            print('OPS! Opção inválida! Por favor, digite [S] para continuar ou [N] para sair.')
+
 
 #Função de encerrar o programa:
 def encerrarPrograma():
