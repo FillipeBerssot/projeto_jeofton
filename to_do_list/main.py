@@ -1,4 +1,4 @@
-
+from funcoes import *
 
 def menu():
     while True:
@@ -16,7 +16,7 @@ def menu():
                       ESCOLHA SUA OPÇÃO: ''').strip()
         
         if opcao == '1':
-            ...
+            adicionarTarefas()
         elif opcao == '2':
             ...
         elif opcao == '3':
