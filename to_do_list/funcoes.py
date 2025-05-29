@@ -118,6 +118,64 @@ def validarSaida():
         else:
             print('OPS! Opção inválida! Por favor, digite [S] para continuar ou [N] para sair.')
 
+#Função de deletar tarefas:
+def deletarTarefas():
+    while True:
+        caminho_arquivo = CAMINHO_ARQUIVO
+
+        try:
+            with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+                tarefas_json = arquivo.readlines()
+                if not tarefas_json:
+                    print('\nNenhuma tarefa foi encontrada para deletar.')
+                    break
+                
+        except FileNotFoundError:
+            print('\nNenhum arquivo de tarefas encontrado.')
+            return
+        
+        tarefas_decodificadas = [json.loads(linha.strip()) for linha in tarefas_json]
+        print('\nQual tarefa você deseja deletar?')
+        for i, tarefa in enumerate(tarefas_decodificadas):
+            print(f'{i + 1} - {tarefa}')
+
+        while True:
+            try:
+                escolha_tarefa = int(input('Digite o número da tarefa que deseja deletar: '))
+                if 1 <= escolha_tarefa <= len(tarefas_decodificadas):
+                    break
+                else:
+                    print('OPS! Número inválido. Tente novamente.')
+
+            except ValueError:
+                print('OPS! Entrada inválida. Por favor, digite apenas o número.')
+
+        indice_para_deletar = escolha_tarefa - 1
+        tarefa_selecionada = tarefas_decodificadas[indice_para_deletar]
+
+        confirmacao = input(f'Você tem certeza que deseja deletar a tarefa "{tarefa_selecionada}"? [S/N]: ').strip().upper()
+
+        if confirmacao != 'S':
+            print('\nOperação de deletar tarefa foi cancelada.')
+            pass
+
+        else:
+            tarefas_json.pop(indice_para_deletar)
+
+            try:
+                with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
+                    arquivo.writelines(tarefas_json)
+                print('\nTarefa deletada com sucesso!')
+
+            except Exception as erro:
+                print(f'ERRO ao deletar a tarefa: {erro}')
+
+        resposta = validarSaida()
+        if resposta == 'N':
+            print('\nDeletar tarefas foi encerrado. Obrigado!')
+            print('======================================================================================')
+            break
+
 #Função de encerrar o programa:
 def encerrarPrograma():
     print('\nEncerrando o programa. Obrigado por usar o nosso sistema de Lista de Afazeres!')
