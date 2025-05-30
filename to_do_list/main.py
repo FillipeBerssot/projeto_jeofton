@@ -18,13 +18,13 @@ def menu():
         if opcao == '1':
             adicionarTarefas()
         elif opcao == '2':
-            ...
+            listarTarefas()
         elif opcao == '3':
-            ...
+            atualizarTarefas()
         elif opcao == '4':
-            ...
+            deletarTarefas()
         elif opcao == '5':
-            ...
+            encerrarPrograma()
         else:
             print('OPS! Opção inválida! Tente Novamente.')
 

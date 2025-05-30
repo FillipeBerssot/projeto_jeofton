@@ -1,3 +1,3 @@
-"Teste"
-"Teste 2"
-"Teste 3"
+"Buscar o carro na oficina as 8 horas da manhã"
+"Lembrar de tomar remedio ao meio dia"
+"Ir ao medico as 10 horas da manhã"
