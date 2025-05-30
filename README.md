@@ -1,8 +1,8 @@
 # Projeto Lista de Afazeres
 
 ## ALUNOS:
-Fillipe Ribeiro Berssot Mori
-Thiago Gabriel Dionísio da Silva
+* Fillipe Ribeiro Berssot Mori
+* Thiago Gabriel Dionísio da Silva
 
 ## 🎯 Descrição
 
