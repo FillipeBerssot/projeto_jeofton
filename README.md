@@ -1,6 +1,10 @@
 # Projeto Lista de Afazeres
 
-## 🎯 Descrição Curta
+## ALUNOS:
+Fillipe Ribeiro Berssot Mori
+Thiago Gabriel Dionísio da Silva
+
+## 🎯 Descrição
 
 Um programa de console simples, desenvolvido em Python, para gerenciar uma lista de tarefas pessoais. Permite ao usuário adicionar, listar, atualizar e deletar tarefas, que são armazenadas localmente em um arquivo de texto.
 
