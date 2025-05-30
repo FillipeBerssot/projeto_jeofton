@@ -2,7 +2,6 @@ import json
 
 CAMINHO_ARQUIVO = 'tarefas.txt'
 
-#Função de adicionar tarefas:
 def adicionarTarefas():
     while True:
         tarefa = input('Digite a tarefa que deseja adicionar: ').strip().capitalize()
@@ -22,7 +21,6 @@ def adicionarTarefas():
             print('======================================================================================')
             break
 
-#Função de listar tarefas:
 def listarTarefas():
     while True:
         try:
@@ -50,7 +48,6 @@ def listarTarefas():
             print('======================================================================================')
             break
 
-#Função de atualizar tarefas:
 def atualizarTarefas():
     while True:
         caminho_arquivo = CAMINHO_ARQUIVO
@@ -107,7 +104,6 @@ def atualizarTarefas():
             print('======================================================================================')
             break
         
-#Função de deletar tarefas:
 def deletarTarefas():
     while True:
         caminho_arquivo = CAMINHO_ARQUIVO
@@ -165,7 +161,6 @@ def deletarTarefas():
             print('======================================================================================')
             break
 
-#Função de validar a saída:
 def validarSaida():
     while True:
         resposta = input ('Deseja continuar? [S/N]: ').strip().upper()
@@ -177,7 +172,6 @@ def validarSaida():
             print('OPS! Opção inválida! Por favor, digite [S] para continuar ou [N] para sair.')
 
 
-#Função de encerrar o programa:
 def encerrarPrograma():
     print('\nEncerrando o programa. Obrigado por usar o nosso sistema de Lista de Afazeres!')
     print('======================================================================================')
