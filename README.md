@@ -4,6 +4,9 @@
 * Fillipe Ribeiro Berssot Mori
 * Thiago Gabriel Dionísio da Silva
 
+## Link Vídeo Youtube:
+* https://www.youtube.com/watch?v=dIbJcWE-H10&ab_channel=Tchillz
+
 ## 🎯 Descrição
 
 Um programa de console simples, desenvolvido em Python, para gerenciar uma lista de tarefas pessoais. Permite ao usuário adicionar, listar, atualizar e deletar tarefas, que são armazenadas localmente em um arquivo de texto.
